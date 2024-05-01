@@ -16,7 +16,7 @@ jobs:
     - name: Build and test with RSpec
       run: |
         gem install bundler
-        bundle install --jobs=4 --retry=3 --path vendor/bundle
+        bundle install --jobs=4 --retry=3
         bin/rspec
     - name: Upload test results to BuildPulse for flaky test detection
       if: '!cancelled()' # Run this step even when the tests fail. Skip if the workflow is cancelled.
