@@ -2,7 +2,7 @@ describe 'Example' do
   it 'passes' do
     expect(true).to eq true
   end
-
+ 
   it 'passes2' do
     expect(true).to eq true
   end
