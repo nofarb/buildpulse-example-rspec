@@ -5,7 +5,7 @@ describe 'Example' do
  
   it 'passes2' do
     expect(true).to eq true
-  end
+  end 
 
  
   it 'passes3' do
