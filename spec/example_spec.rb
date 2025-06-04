@@ -11,7 +11,14 @@ describe 'Example' do
   it 'passes3' do
     expect(true).to eq true
   end
-  
+
+  it 'passes4' do
+    expect(true).to eq true
+  end
+
+  it 'passes5' do
+    expect(true).to eq true
+  end
 
   it 'is flaky' do
     # 25% chance to fail, 75% to pass
