@@ -7,7 +7,7 @@ describe 'Example' do
     expect(false).to eq true
   end
 
-  it 'fails2' do
+  it 'fails2' do 
     expect(false).to eq true
   end
 
