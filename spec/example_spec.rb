@@ -8,7 +8,7 @@ describe 'Example' do
   end
 
   it 'is flaky' do
-    # 50% chance to pass or fail
-    expect(rand(2)).to eq 1
+    # 25% chance to fail, 75% to pass
+    expect(rand < 0.75).to eq true
   end
 end
