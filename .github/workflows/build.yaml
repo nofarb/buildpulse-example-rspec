@@ -1,0 +1,29 @@
+name: CI
+ 
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+
+    - name: Build and test with RSpec
+      run: |
+        gem install bundler
+        bundle install --jobs=4 --retry=3
+        bin/rspec
+    - name: Upload test results to BuildPulse for flaky test detection
+      if: '!cancelled()' # Run this step even when the tests fail. Skip if the workflow is cancelled.
+      uses: buildpulse/buildpulse-action@main
+      with:
+        account: 1283885 # Replace this value with your BuildPulse account ID
+        repository: 995790119 # Replace this value with your BuildPulse repository ID
+        path: spec/reports
+        key: ${{ secrets.BUILDPULSE_ACCESS_KEY_ID }}
+        secret: ${{ secrets.BUILDPULSE_SECRET_ACCESS_KEY }}
