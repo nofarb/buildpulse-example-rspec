@@ -7,6 +7,10 @@ describe 'Example' do
     expect(false).to eq true
   end
 
+  it 'fails2' do
+    expect(false).to eq true
+  end
+
   it 'is flaky' do
     # 25% chance to fail, 75% to pass
     expect(rand < 0.75).to eq true
