@@ -4,7 +4,7 @@ describe 'Example' do
   end
  
   it 'passes2' do
-    expect(true).to eq true
+    expect(true).to eq true 
   end 
 
  
