@@ -2,7 +2,7 @@
  
 This is an example [RSpec](https://rspec.info/) project demonstrating how to send test results to [BuildPulse](https://buildpulse.io) to help you find and [fix flaky tests](https://buildpulse.io/products/flaky-tests).
       
-## CircleCI Integration  
+## CircleCI Integration   
 
 If you have an existing RSpec project building on [CircleCI](https://circleci.com/), this [diff](https://github.com/buildpulse/buildpulse-example-rspec/compare/7d2004e...circle-ci) shows how to set up your `.circleci/config.yml` to send test results to BuildPulse.
   
